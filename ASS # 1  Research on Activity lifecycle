@@ -1,50 +1,54 @@
-Examples:
-1. (onCreate)
+package com.example.helloworld;
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    Log.d("Lifecycle", "onCreate called");
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+
+public class MainActivity extends Activity {
+   String msg = "Android : ";
+   
+   1. ONCREATE() /** Called when the activity is first created. */
+   @Override
+   public void onCreate(Bundle savedInstanceState) {
+/** box of the saved/restore  data*/
+      super.onCreate(savedInstanceState);
+
+      setContentView(R.layout.activity_main); /** sets the Layout XML as the UI */
+      Log.d(msg, "The onCreate() event"); /** prints a log message for debugging */
+   }
+
+   /** Called when the activity is about to become visible. */
+   @Override
+   protected void onStart() {
+      super.onStart(); /** default android code or calls the parent class */
+      Log.d(msg, "The onStart() event");
+   }
+
+   /** Called when the activity has become visible. */
+   @Override
+   protected void onResume() {
+      super.onResume();
+      Log.d(msg, "The onResume() event");
+   }
+
+   /** Called when another activity is taking focus. */
+   @Override
+   protected void onPause() {
+      super.onPause();
+      Log.d(msg, "The onPause() event");
+   }
+
+   /** Called when the activity is no longer visible. */
+   @Override
+   protected void onStop() {
+      super.onStop();
+      Log.d(msg, "The onStop() event");
+   }
+
+   /** Called just before the activity is destroyed. */
+   @Override
+   public void onDestroy() {
+      super.onDestroy();
+      Log.d(msg, "The onDestroy() event");
+   }
 }
-
-2. (onStart)
-
-@Override
-protected void onStart() {
-    super.onStart();
-    Log.d("Lifecycle", "onStart called");
-}
-
-3. (onResume)
-
-@Override
-protected void onResume() {
-    super.onResume();
-    Log.d("Lifecycle", "onResume called");
-}
-
-4. (onPause)
-
-@Override
-protected void onPause() {
-    super.onPause();
-    Log.d("Lifecycle", "onPause called");
-}
-
-5. (onStop)
-
-@Override
-protected void onStop() {
-    super.onStop();
-    Log.d("Lifecycle", "onStop called");
-}
-
-6. (onDestroy)
-
-@Override
-protected void onDestroy() {
-    super.onDestroy();
-    Log.d("Lifecycle", "onDestroy called");
-}
-
