@@ -1,0 +1,142 @@
+Activity 1
+<resources>
+    <string name="app_name">XMLResourcesLab</string>
+    <string name="welcome_message">Welcome to XML Resources Lab!</string>
+    <string name="button_text">Click to Debug</string>
+</resources>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_message" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text" />
+</LinearLayout> 
+
+
+package com.example.xmlresourceslab;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button button = findViewById(R.id.button);
+        Log.i("DEBUG_TAG", "MainActivity started successfully");
+    }
+}
+
+Activity 3
+ Log.d("DEBUG_TAG", "Debugging message");
+Log.w("DEBUG_TAG", "Warning message");
+Log.e("DEBUG_TAG", "Error message");
+
+
+Activity 4
+ <resources>
+    <string name="welcome_message">¡Bienvenido al Laboratorio de XML!</string>
+    <string name="button_text">Presióname</string>
+</resources
+
+
+Overall Code
+MainActivity.java
+
+
+
+package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+
+// Reference the button (make sure it has an ID in XML)
+Button button = findViewById(R.id.button);
+
+Log.i("DEBUG_TAG", "MainActivity started successfully");
+Log.d("DEBUG_TAG", "Debugging message");
+Log.w("DEBUG_TAG", "Warning message");
+Log.e("DEBUG_TAG", "Error message");
+
+}
+}
+
+
+
+Activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+android:padding="16dp">
+
+<TextView
+android:id="@+id/welcomeText"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/welcome_message"
+android:textSize="20sp"
+android:textStyle="bold"
+android:layout_marginBottom="24dp" />
+
+<Button
+android:id="@+id/button"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/button_text" />
+
+</LinearLayout>
+
+
+Values/strings.xml
+
+<resources>
+<string name="app_name">MyApplication3</string>
+<string name="welcome_message">Welcome to XML Resources Lab!</string>
+<string name="button_text">Click to Debug</string>
+</resources>
+
+
+
+
+Es\strings.xml
+
+<resources>
+<string name="welcome_message">¡Bienvenido al Laboratorio de XML!</string>
+<string name="button_text">Presióname</string>
+</resources>
+
+
+
+
+
+
+
+
